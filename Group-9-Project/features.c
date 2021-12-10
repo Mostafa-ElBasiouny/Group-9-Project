@@ -79,3 +79,53 @@ void list()
 	fclose(fp);
 	_getch();
 }
+
+void del()
+{
+	FILE* fp, * tmp;
+	int i = 1;
+	char id[MAX_NAME_INP];//20
+	if ((tmp = fopen("temp.txt", "w")) == NULL)
+	{
+		printf("Error opening file!!");
+		exit(0);
+	}
+
+	if ((fp = fopen("apt.txt", "r")) == NULL)
+	{
+		printf("Error opening file!!");
+		exit(0);
+	}
+
+	system("cls");
+	printf("Enter the Customer ID to remove it: \n");
+	fflush(stdin);
+	scanf("%s", id);
+	while (fread(&det, sizeof(det), 1, fp) == 1)
+	{
+		if (strcmp(det.id, id) == 0)
+		{
+			i = 0;
+			continue;
+		}
+		else
+			fwrite(&det, sizeof(det), 1, tmp);
+	}
+	if (i == 1)
+	{
+		printf("\n\n Records of Customer with this ID is not found!!");
+
+		_getch();
+		fclose(fp);
+		fclose(tmp);
+		main();
+	}
+	fclose(fp);
+	fclose(tmp);
+	remove("apt.txt");
+	rename("temp.txt", "apt.txt");
+	printf("\n\nThe Customer is successfully removed....");
+	fclose(fp);
+	fclose(tmp);
+	_getch();
+}

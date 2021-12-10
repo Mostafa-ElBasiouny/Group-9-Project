@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="features.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>

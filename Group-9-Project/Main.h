@@ -19,3 +19,5 @@ struct info
 	char date[MAX_DATE_INP];//25
 
 }det;
+
+void add();

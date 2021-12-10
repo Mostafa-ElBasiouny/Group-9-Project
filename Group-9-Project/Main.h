@@ -23,3 +23,4 @@ struct info
 void add();
 void list();
 void del();
+void edit();

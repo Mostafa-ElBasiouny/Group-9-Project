@@ -129,3 +129,47 @@ void del()
 	fclose(tmp);
 	_getch();
 }
+
+void edit()
+{
+	FILE* fp;
+	int flag = 1;
+	char id[MAX_NAME_INP];//20
+	long int size = sizeof(det);
+	if ((fp = fopen("apt.txt", "r+")) == NULL)
+		exit(0);
+	system("cls");
+	printf("Enter Customer ID to edit:\n\n");
+	scanf("%s[^\n]", id);
+	fflush(stdin);
+	while (fread(&det, sizeof(det), 1, fp) == 1)
+	{
+		if (strcmp(det.id, id) == 0)
+		{
+			flag = 0;
+			printf("\nEnter ID     :");
+			scanf("%s", &det.id);
+			printf("\nEnter first Name    :");
+			fflush(stdin);
+			scanf("%s", &det.name);
+			printf("\nEnter last name        :");
+			scanf("%s", &det.l_name);
+			printf("\nEnter Date :");
+			scanf("%s", &det.date);
+
+			fseek(fp, size, SEEK_CUR);  //go to pointed position 
+			fwrite(&det, sizeof(det), 1, fp);
+			break;
+		}
+	}
+	if (flag == 1) {
+		printf("\n\nNO RECORD!!!!");
+		fclose(fp);
+		_getch();
+	}
+	else {
+		fclose(fp);
+		printf("\n\n\t\tRECORD IS SUCCESSFULLY EDITED!!!");
+		_getch();
+	}
+}

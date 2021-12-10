@@ -47,3 +47,35 @@ void add()
 	}
 	fclose(fp);
 }
+
+void list()
+{
+	FILE* fp;
+	int i;
+	if ((fp = fopen("apt.txt", "r")) == NULL)
+	{
+		printf("Error opening file!!");
+		exit(0);
+	}
+
+	system("cls");
+	printf("ID    ");
+	printf("FIRST NAME ");
+	printf("\tLAST NAME ");
+	printf("\tDATE\n");
+
+
+	for (i = 0; i < 118; i++)
+		printf("-");
+	while (fread(&det, sizeof(det), 1, fp) == 1)
+	{
+
+		printf("\n%s \t%s \t\t%s \t\%s", det.id, det.name, det.l_name, det.date);
+	}
+	printf("\n");
+	for (i = 0; i < 118; i++)
+		printf("-");
+
+	fclose(fp);
+	_getch();
+}

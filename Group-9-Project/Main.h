@@ -21,3 +21,4 @@ struct info
 }det;
 
 void add();
+void list();

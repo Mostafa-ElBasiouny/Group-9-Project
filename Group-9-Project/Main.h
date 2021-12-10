@@ -24,3 +24,4 @@ void add();
 void list();
 void del();
 void edit();
+void search();

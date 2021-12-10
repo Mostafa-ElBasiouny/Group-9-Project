@@ -173,3 +173,40 @@ void edit()
 		_getch();
 	}
 }
+
+void search()
+{
+	system("cls");
+	FILE* fp;
+	char id[MAX_NAME_INP];//20
+	int flag = 1;
+	fp = fopen("apt.txt", "r+");
+	if (fp == 0)
+	{
+		printf("Error opening file!!");
+		exit(0);
+	}
+
+	fflush(stdin);
+	printf("Enter Customer ID to search its details: \n");
+	scanf("%s", id);
+	while (fread(&det, sizeof(det), 1, fp) == 1)
+	{
+		if (strcmp(det.id, id) == 0) {
+			flag = 0;
+			printf("\n\tRecord Found\n ");
+			printf("\nID:\t%s", det.id);
+			printf("\nFirst Name:\t%s", det.name);
+			printf("\nLast Name:\t%s", det.l_name);
+			printf("\nDate:\t%s", det.date);
+
+			flag = 0;
+			break;
+		}
+	}
+	if (flag == 1) {
+		printf("\n\tRequested Customer could not be found!");
+	}
+	_getch();
+	fclose(fp);
+}

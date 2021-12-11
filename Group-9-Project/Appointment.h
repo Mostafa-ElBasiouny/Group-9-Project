@@ -9,6 +9,7 @@
 *	- Hunter-Oswald
 *
 *	HISTORY
+*	- Added struct and macros	>>> Ali-Noureddine
 *	- Added includes from appointment.c	and main.c		>>> Mostafa-Elbasiouny
 */
 

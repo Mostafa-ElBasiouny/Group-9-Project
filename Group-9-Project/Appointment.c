@@ -9,6 +9,12 @@
 *	- Hunter-Oswald
 * 
 *	HISTORY
+*	- Added add() function		>>> Ali-Noureddine
+*	- Added list() function		>>> Ali-Noureddine
+*	- Added del() function		>>> Ali-Noureddine
+*	- Added edit() function		>>> Ali-Noureddine
+*	- Added search() function	>>> Ali-Noureddine
+* 
 *	- Added range() function					>>> Mostafa-Elbasiouny
 *	- Fixed add() to reject non-numeric id's	>>> Mostafa-Elbasiouny
 *	- Fixed duplicate id's check in add()		>>> Mostafa-Elbasiouny

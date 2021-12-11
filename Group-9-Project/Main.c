@@ -9,6 +9,7 @@
 *	- Hunter-Oswald
 *
 *	HISTORY
+*	- Added initial menu.	>>> Ali-Noureddine
 *	- Cleaned up main.c and added range search to the menu.		>>> Mostafa-Elbasiouny
 */
 

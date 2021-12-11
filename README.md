@@ -14,6 +14,10 @@ An appointment manager program for creating/deleting/updating appointments with 
 - [x] Load accumulated data from disk.
 
 ## Contributors
-`Aliouchi` - <br>
+`Ali-Noureddine` - Added Add function
+				 - Added Delete function
+				 - Added Edit function
+				 - Added Search function
+				 - Added List function<br>
 `Hunter-Oswald` - <br>
 `Mostafa-Elbasiouny` - Enhanced the menu, added range search and other quality changes/fixes.<br>

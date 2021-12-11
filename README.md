@@ -16,4 +16,4 @@ An appointment manager program for creating/deleting/updating appointments with 
 ## Contributors
 `Aliouchi` - <br>
 `Hunter-Oswald` - <br>
-`Mostafa-Elbasiouny` - <br>
+`Mostafa-Elbasiouny` - Enhanced the menu, added range search and other quality changes/fixes.<br>

@@ -36,8 +36,7 @@ int main(void)
 		printf("\n%s[4]%s Display a single appointment", CYAN, RESET);
 		printf("\n%s[5]%s Display a range of appointments", CYAN, RESET);
 		printf("\n%s[6]%s Display all appointments", CYAN, RESET);
-		printf("\n%s[7]%s Search for an appointment", CYAN, RESET);
-		printf("\n%s[8]%s Exit%s\n", CYAN, RED, RESET);
+		printf("\n%s[7]%s Exit%s\n", CYAN, RED, RESET);
 
 		printf("%s", BLUE);
 		for (int i = 0; i < 16; i++) printf("=-=");
@@ -61,7 +60,7 @@ int main(void)
 			range(); break;
 		case '6':
 			list(); break;
-		case '8':
+		case '7':
 			clear_screen();
 			printf("%sExiting...%s\n", RED, RESET);
 			exit(0);

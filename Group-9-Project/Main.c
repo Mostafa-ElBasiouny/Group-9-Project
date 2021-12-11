@@ -1,82 +1,75 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-#include<conio.h>
-#include<ctype.h>
-#include<stdlib.h>
+/*
+*	GROUP 9 PROJECT - Main.c
+*
+*	DECEMBER - 2021
+*
+*	CONTRIBUTERS
+*	- Aliouchi
+*	- Mostafa-Elbasiouny
+*	- Hunter-Oswald
+*
+*	HISTORY
+*	- Cleaned up main.c and added range search to the menu.		>>> Mostafa-Elbasiouny
+*/
 
-#include "Main.h"
-
+#include "Appointment.h"
 
 int main(void)
 {
 	int i = 0;
-
-
 	char customername;
 	char input;
 
-	system("cls");
-
-
-	system("cls");
 	while (1)
 	{
-		system("cls");
+		clear_screen();
 
-		for (i = 0; i < 80; i++)
-			printf("-");
-		printf("\n");
+		printf("%s", BLUE);
+		for (int i = 0; i < 16; i++) printf("=-=");
+		printf("%s", RESET);
+		
+		printf("\n\t\tEnter your choice\n");
+		printf("\t\t%s_________________%s\n", BLUE, RESET);
+		printf("\n%s[1]%s Book an appointment", CYAN, RESET);
+		printf("\n%s[2]%s Delete an appointment", CYAN, RESET);
+		printf("\n%s[3]%s Update an appointment", CYAN, RESET);
+		printf("\n%s[4]%s Display a single appointment", CYAN, RESET);
+		printf("\n%s[5]%s Display a range of appointments", CYAN, RESET);
+		printf("\n%s[6]%s Display all appointments", CYAN, RESET);
+		printf("\n%s[7]%s Search for an appointment", CYAN, RESET);
+		printf("\n%s[8]%s Exit%s\n", CYAN, RED, RESET);
 
+		printf("%s", BLUE);
+		for (int i = 0; i < 16; i++) printf("=-=");
+		printf("%s", RESET);
 
-
-		printf("\n");
-		printf("\t\t *ENTER YOUR CHOICE*:");
-		printf("\n\n");
-		printf(" \n Enter 1 -> Book an Appointment");
-		printf("\n---------------------------------");
-		printf(" \n Enter 2 -> View Customer Record");
-		printf("\n----------------------------------");
-		printf(" \n Enter 3 -> Delete Customer Record");
-		printf("\n-----------------------------------");
-		printf(" \n Enter 4 -> Search Customer Record");
-		printf("\n-----------------------------------");
-		printf(" \n Enter 5 -> Edit Record");
-		printf("\n-----------------------");
-		printf(" \n Enter 6 -> Exit");
-		printf("\n-----------------");
-		printf("\n");
-
-		for (i = 0; i < 80; i++)
-			printf("-");
-
-		printf("\n\n-->");
+		printf("\n\n%sChoice%s ~> ", CYAN, RESET);
 
 		input = _getche();
 		input = toupper(input);
 		switch (input)
 		{
 		case '1':
-
 			add(); break;
 		case '2':
-			list(); break;
-		case '3':
 			del(); break;
+		case '3':
+			edit(); break;
 		case '4':
 			search(); break;
 		case '5':
-			edit(); break;
+			range(); break;
 		case '6':
-			system("cls");
-			printf("\n\n\t GOOD BYE!");
-
-
+			list(); break;
+		case '8':
+			clear_screen();
+			printf("%sExiting...%s\n", RED, RESET);
 			exit(0);
 			break;
 		default:
-			system("cls");
-			printf("Incorrect Input");
-			printf("\n Press any key to continue");
+			clear_screen();
+			printf("%sIncorrect Input!%s", RED, RESET);
+			printf("\nPress any key to go back to menu.");
 			_getch();
 		}
 	}

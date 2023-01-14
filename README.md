@@ -34,9 +34,5 @@ clang *.c -o main
 ```
 
 ## Contributors
-`Ali-Noureddine` - Added Add function
-				 - Added Delete function
-				 - Added Edit function
-				 - Added Search function
-				 - Added List function<br>
+`Ali-Noureddine` - Added add, delete, edit, search and list function.<br>
 `Mostafa-Elbasiouny` - Enhanced the menu, added range search and other quality changes/fixes including input validation.<br>

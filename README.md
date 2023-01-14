@@ -39,5 +39,4 @@ clang *.c -o main
 				 - Added Edit function
 				 - Added Search function
 				 - Added List function<br>
-`Hunter-Oswald` - <br>
 `Mostafa-Elbasiouny` - Enhanced the menu, added range search and other quality changes/fixes including input validation.<br>
